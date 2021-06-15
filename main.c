@@ -198,7 +198,6 @@ for(i=0;i<=ogrenciSayac;i++){
     }
 }
 
-
 if(ogrenciKontrol==0){
     printf("Ogrencinin adini giriniz: ");
     scanf("%s",adPointer[ogrenciSayac]);
