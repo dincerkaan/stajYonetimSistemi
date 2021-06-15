@@ -50,7 +50,7 @@ FILE *ogrenciDosya;
 FILE *firmaDosya;
 FILE *stajDosya;
 
-genelMenu(){
+void genelMenu(){
     printf("\n\tGENEL MENU SECIM EKRANI");
     printf("\n_____________________________________");
     printf("\n1- Ogrenci Islemleri");
@@ -74,7 +74,7 @@ genelMenu(){
     }
 }
 
-ogrenciMenu(){
+void ogrenciMenu(){
     printf("\n\n\tOGRENCI MENU SECIM EKRANI");
     printf("\n_____________________________________");
     printf("\n1- Ogrenci Ekleme Islemi");
@@ -106,7 +106,7 @@ ogrenciMenu(){
     }
 }
 
-firmaMenu(){
+void firmaMenu(){
     printf("\n\n\tFIRMA MENU SECIM EKRANI");
     printf("\n_____________________________________");
     printf("\n1- Firma Ekleme Islemi");
@@ -138,7 +138,7 @@ firmaMenu(){
     }
 }
 
-stajMenu(){
+void stajMenu(){
     printf("\n\nSTAJ MENU SECIM EKRANI");
     printf("\n____________________________");
     printf("\n1- Staj Ekleme Islemleri");
@@ -166,7 +166,7 @@ stajMenu(){
     }
 }
 
-ogrenciEkleme(){
+void ogrenciEkleme(){
 
 noPointer = &ogrenci[ogrenciSayac].ogrenciNo;
 adPointer[ogrenciSayac] = &ogrenci[ogrenciSayac].ogrenciAd;
@@ -198,6 +198,7 @@ for(i=0;i<=ogrenciSayac;i++){
     }
 }
 
+
 if(ogrenciKontrol==0){
     printf("Ogrencinin adini giriniz: ");
     scanf("%s",adPointer[ogrenciSayac]);
@@ -222,7 +223,7 @@ if(ogrenciKontrol==0){
     }
 }
 
-ogrenciDuzenleme(){
+void ogrenciDuzenleme(){
 
 printf("\nBilgileri duzenlenecek ogrencinin numarasini giriniz: ");
 scanf("%d",&duzenlemeNumara);
@@ -292,7 +293,7 @@ for(i=0;i<ogrenciSayac;i++){
     }
 }
 
-ogrenciSilme(){
+void ogrenciSilme(){
     printf("\nBilgileri silinecek ogrencinin numarasini giriniz: ");
     scanf("%d",&silmeBilgi);
     for(i=0;i<=ogrenciSayac;i++){
@@ -326,7 +327,7 @@ ogrenciSilme(){
     }
 }
 
-ogrenciListeleme(){
+void ogrenciListeleme(){
     printf("\n\t\t\t\tOGRENCI LISTESI ");
     printf("\n ----------------------------------------------------------------------");
     printf("\nOgrenci No \t       Ogrenci Ad \t    Ogrenci Soyad \t    Ogrenci Telefon");
@@ -346,7 +347,7 @@ ogrenciListeleme(){
     }
 }
 
-firmaEkleme(){
+void firmaEkleme(){
 
 vergiNoPointer = &firma[firmaSayac].vergiNo;
 firmaAdPointer[firmaSayac] = &firma[firmaSayac].firmaAd;
@@ -398,7 +399,7 @@ vergiKontrol=0;
     }
 }
 
-firmaDuzenleme(){
+void firmaDuzenleme(){
 
 printf("\nBilgileri duzenlenecek firmanin vergi numarasini giriniz: ");
 scanf("%d",&duzenlemeNumara);
@@ -460,7 +461,7 @@ for(i=0;i<firmaSayac;i++){
     }
 }
 
-firmaSilme(){
+void firmaSilme(){
     printf("\nBilgileri silinecek firmanin vergi numarasini giriniz: ");
     scanf("%d",&silmeBilgi);
     for(i=0;i<=firmaSayac;i++){
@@ -493,7 +494,7 @@ firmaSilme(){
     }
 }
 
-firmaListeleme(){
+void firmaListeleme(){
     printf("\n\t\t\t\tFIRMA LISTESI ");
     printf("\n ----------------------------------------------------------------------");
     printf("\nFirma Vergi No \t         Firma Ad \t          Firma Faaliyet Alani ");
@@ -512,7 +513,7 @@ firmaListeleme(){
     }
 }
 
-stajEkleme(){
+void stajEkleme(){
 printf("\nStaj yapacak ogrencinin numarasini giriniz: ");
 scanf("%d",&stajNumaraGecici);
 
@@ -534,7 +535,7 @@ if(stajEklemeNumara==0){
 
 }
 
-tarihHesaplama(){
+void tarihHesaplama(){
 
 if(stajEklemeNumara==1){
     printf("Staj yapilacak firmanin vergi numarasini giriniz: ");
